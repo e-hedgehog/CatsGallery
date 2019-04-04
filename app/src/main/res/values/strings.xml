@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CatsGallery</string>
+    <string name="images_title">Images</string>
+    <string name="breeds_title">Breeds</string>
+</resources>
