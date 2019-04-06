@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.ehedgehog.android.catsgallery.model.CatImage;
+import com.squareup.picasso.Picasso;
 
 public class ImageHolder extends RecyclerView.ViewHolder {
 
@@ -18,6 +19,6 @@ public class ImageHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(CatImage catImage) {
-        mCatImage.setImageResource(R.mipmap.ic_launcher_round);
+        Picasso.get().load(catImage.getUrl()).into(mCatImage);
     }
 }
