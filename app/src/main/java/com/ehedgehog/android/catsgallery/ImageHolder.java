@@ -19,6 +19,6 @@ public class ImageHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(CatImage catImage) {
-        Picasso.get().load(catImage.getUrl()).into(mCatImage);
+        Picasso.get().load(catImage.getUrl()).fit().centerCrop().into(mCatImage);
     }
 }

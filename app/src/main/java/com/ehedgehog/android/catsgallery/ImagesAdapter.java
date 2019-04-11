@@ -42,4 +42,8 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImageHolder> {
     public void setImages(List<CatImage> images) {
         mImages = images;
     }
+
+    public void addAll(List<CatImage> images) {
+        mImages.addAll(images);
+    }
 }

@@ -2,7 +2,9 @@ package com.ehedgehog.android.catsgallery.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class CatImage {
+import io.realm.RealmObject;
+
+public class CatImage extends RealmObject {
 
     @SerializedName("id")
     private String mId;
