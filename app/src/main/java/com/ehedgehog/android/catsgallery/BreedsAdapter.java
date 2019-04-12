@@ -31,7 +31,7 @@ public class BreedsAdapter extends RecyclerView.Adapter<BreedHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull BreedHolder breedHolder, int i) {
-        breedHolder.bind(mBreeds.get(i), i);
+        breedHolder.bind(mContext, mBreeds.get(i));
     }
 
     @Override
@@ -41,5 +41,9 @@ public class BreedsAdapter extends RecyclerView.Adapter<BreedHolder> {
 
     public void setBreeds(List<Breed> breeds) {
         mBreeds = breeds;
+    }
+
+    public void addAll(List<Breed> breeds) {
+        mBreeds.addAll(breeds);
     }
 }

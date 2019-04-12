@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 public abstract class BaseFragment extends Fragment {
 
+    protected static final int ITEMS_PER_PAGE = 20;
+
     protected boolean isOnline() {
         ConnectivityManager manager = (ConnectivityManager) getActivity()
                 .getSystemService(Context.CONNECTIVITY_SERVICE);

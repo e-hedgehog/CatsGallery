@@ -29,7 +29,7 @@ public class CatsImagesFragment extends BaseFragment {
 
     private static final String TAG = "CatsImagesFragment";
 
-    private static final int ITEMS_PER_PAGE = 20;
+//    private static final int ITEMS_PER_PAGE = 20;
 
     private ProgressBar mProgressBar;
     private SwipeRefreshLayout mSwipeRefresh;

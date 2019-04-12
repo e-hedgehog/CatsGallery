@@ -23,13 +23,14 @@
             tools:src="@tools:sample/avatars"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/breed_image_description" />
 
         <TextView
             android:id="@+id/cats_breed_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:textColor="@android:color/black"
@@ -38,6 +39,17 @@
             app:layout_constraintStart_toEndOf="@+id/cats_breed_image"
             app:layout_constraintTop_toTopOf="@+id/cats_breed_image"
             tools:text="BreedTitle" />
+
+        <TextView
+            android:id="@+id/cats_breed_origin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/cats_breed_title"
+            app:layout_constraintStart_toStartOf="@+id/cats_breed_title"
+            app:layout_constraintTop_toBottomOf="@+id/cats_breed_title"
+            tools:text="Origin" />
 
     </android.support.constraint.ConstraintLayout>
 

@@ -1,6 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/breed_details_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="top|center_horizontal"
+        android:scaleType="centerCrop"
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="@string/details_image_description"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/breed_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Description" />
+
+        <TextView
+            android:id="@+id/breed_alt_names_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/breed_description"
+            android:text="@string/alt_names_label" />
+
+        <TextView
+            android:id="@+id/breed_alt_names"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_description"
+            app:layout_constraintStart_toEndOf="@+id/breed_alt_names_label"
+            app:layout_constraintTop_toTopOf="@+id/breed_alt_names_label"
+            tools:text="alt names" />
+
+        <TextView
+            android:id="@+id/breed_origin_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/origin_label"
+            app:layout_constraintStart_toStartOf="@+id/breed_alt_names_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_alt_names" />
+
+        <TextView
+            android:id="@+id/breed_origin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_alt_names"
+            app:layout_constraintStart_toEndOf="@+id/breed_origin_label"
+            app:layout_constraintTop_toTopOf="@+id/breed_origin_label"
+            tools:text="origin" />
+
+        <TextView
+            android:id="@+id/breed_temperament_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temperament_label"
+            app:layout_constraintStart_toStartOf="@+id/breed_origin_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_origin" />
+
+        <TextView
+            android:id="@+id/breed_temperament"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_origin"
+            app:layout_constraintStart_toEndOf="@+id/breed_temperament_label"
+            app:layout_constraintTop_toTopOf="@+id/breed_temperament_label"
+            tools:text="temperament" />
+
+        <TextView
+            android:id="@+id/breed_life_span_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/life_span_label"
+            app:layout_constraintStart_toStartOf="@+id/breed_temperament_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_temperament" />
+
+        <TextView
+            android:id="@+id/breed_life_span"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_temperament"
+            app:layout_constraintStart_toEndOf="@+id/breed_life_span_label"
+            app:layout_constraintTop_toTopOf="@+id/breed_life_span_label"
+            tools:text="life span" />
+
+        <TextView
+            android:id="@+id/breed_weight_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weight_label"
+            app:layout_constraintStart_toStartOf="@+id/breed_life_span_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_life_span" />
+
+        <TextView
+            android:id="@+id/breed_weight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_life_span"
+            app:layout_constraintStart_toEndOf="@+id/breed_weight_label"
+            app:layout_constraintTop_toTopOf="@+id/breed_weight_label"
+            tools:text="weight" />
+
+        <TextView
+            android:id="@+id/breed_adaptability_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/adaptability_label"
+            app:layout_constraintStart_toStartOf="@+id/breed_weight_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_weight" />
+
+        <TextView
+            android:id="@+id/breed_adaptability"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_weight"
+            app:layout_constraintStart_toEndOf="@+id/breed_adaptability_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_weight_label"
+            tools:text="adaptability" />
+
+        <TextView
+            android:id="@+id/breed_affection_level_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/affection_level_label"
+            app:layout_constraintStart_toStartOf="@+id/breed_adaptability_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_adaptability" />
+
+        <TextView
+            android:id="@+id/breed_affection_level"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_adaptability"
+            app:layout_constraintStart_toEndOf="@+id/breed_affection_level_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_adaptability_label"
+            tools:text="affection" />
+
+        <TextView
+            android:id="@+id/breed_energy_level_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/energy_level_label"
+            app:layout_constraintStart_toStartOf="@+id/breed_affection_level_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_affection_level" />
+
+        <TextView
+            android:id="@+id/breed_energy_level"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_affection_level"
+            app:layout_constraintStart_toEndOf="@+id/breed_energy_level_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_affection_level_label"
+            tools:text="energy" />
+
+        <TextView
+            android:id="@+id/breed_intelligence_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intelligence_label"
+            app:layout_constraintStart_toStartOf="@+id/breed_energy_level_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_energy_level" />
+
+        <TextView
+            android:id="@+id/breed_intelligence"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_energy_level"
+            app:layout_constraintStart_toEndOf="@+id/breed_intelligence_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_energy_level_label"
+            tools:text="intelligence" />
+
+        <TextView
+            android:id="@+id/breed_stranger_friendly_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stranger_friendly_label"
+            app:layout_constraintStart_toStartOf="@+id/breed_intelligence_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_intelligence" />
+
+        <TextView
+            android:id="@+id/breed_stranger_friendly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/breed_intelligence"
+            app:layout_constraintStart_toEndOf="@+id/breed_stranger_friendly_label"
+            app:layout_constraintTop_toBottomOf="@+id/breed_intelligence_label"
+            tools:text="stranger friendly" />
+
+    </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>

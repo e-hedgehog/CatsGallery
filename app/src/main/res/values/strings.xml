@@ -2,4 +2,16 @@
     <string name="app_name">CatsGallery</string>
     <string name="images_title">Images</string>
     <string name="breeds_title">Breeds</string>
+    <string name="breed_image_description">Breed Image</string>
+    <string name="details_image_description">Breed Details Image</string>
+    <string name="alt_names_label">Alt Names:</string>
+    <string name="origin_label">Origin:</string>
+    <string name="temperament_label">Temperament:</string>
+    <string name="life_span_label">Life Span:</string>
+    <string name="weight_label">Weight:</string>
+    <string name="adaptability_label">Adaptability:</string>
+    <string name="affection_level_label">Affection Level:</string>
+    <string name="energy_level_label">Energy Level:</string>
+    <string name="intelligence_label">Intelligence:</string>
+    <string name="stranger_friendly_label">Stranger Friendly:</string>
 </resources>
