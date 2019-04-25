@@ -13,7 +13,9 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
 import com.ehedgehog.android.catsgallery.model.Breed;
+import com.ehedgehog.android.catsgallery.model.CatImage;
 import com.ehedgehog.android.catsgallery.network.ApiFactory;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -143,24 +145,6 @@ public class CatsBreedsFragment extends BaseFragment {
                         Log.e(TAG, "Something is wrong", throwable));
     }
 
-//    private void loadBreedImage(String breedId, BreedWithImage breedWithImage) {
-//        Call<CatImage> call = ApiFactory.buildCatsService()
-//                .getBreedImage(breedId);
-//        call.enqueue(new Callback<CatImage>() {
-//            @Override
-//            public void onResponse(@NonNull Call<CatImage> call, @NonNull Response<CatImage> response) {
-//                if (response.isSuccessful()) {
-//                    breedWithImage.setCatImage(response.body());
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<CatImage> call, Throwable t) {
-//                Log.e(TAG, "Failed loading breed image", t);
-//            }
-//        });
-//    }
-
     private void setupSwipeRefresh(SwipeRefreshLayout swipeRefresh) {
         swipeRefresh.setColorSchemeResources(
                 android.R.color.black,
@@ -178,17 +162,17 @@ public class CatsBreedsFragment extends BaseFragment {
     }
 
     private void updateBreeds(List<Breed> breeds) {
-        BreedsAdapter adapter = (BreedsAdapter) mRecyclerView.getAdapter();
-        if (adapter == null) {
-            adapter = new BreedsAdapter(getActivity(), breeds);
-            mRecyclerView.setAdapter(adapter);
+        mAdapter = (BreedsAdapter) mRecyclerView.getAdapter();
+        if (mAdapter == null) {
+            mAdapter = new BreedsAdapter(getActivity(), breeds);
+            mRecyclerView.setAdapter(mAdapter);
         } else {
             if (mPaginationPage == 0) {
-                adapter.setBreeds(breeds);
-                adapter.notifyDataSetChanged();
+                mAdapter.setBreeds(breeds);
+                mAdapter.notifyDataSetChanged();
             } else {
-                adapter.addAll(breeds);
-                adapter.notifyItemRangeInserted(
+                mAdapter.addAll(breeds);
+                mAdapter.notifyItemRangeInserted(
                         mPaginationPage * ITEMS_PER_PAGE, ITEMS_PER_PAGE);
             }
         }

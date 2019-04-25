@@ -14,6 +14,14 @@ public class CatImage extends RealmObject implements Serializable {
     @SerializedName("url")
     private String mUrl;
 
+    private String mBreedId;
+
+    public CatImage(String id, String url, String breedId) {
+        mId = id;
+        mUrl = url;
+        mBreedId = breedId;
+    }
+
     public CatImage(String id, String url) {
         mId = id;
         mUrl = url;
@@ -36,5 +44,13 @@ public class CatImage extends RealmObject implements Serializable {
 
     public void setUrl(String url) {
         mUrl = url;
+    }
+
+    public String getBreedId() {
+        return mBreedId;
+    }
+
+    public void setBreedId(String breedId) {
+        mBreedId = breedId;
     }
 }

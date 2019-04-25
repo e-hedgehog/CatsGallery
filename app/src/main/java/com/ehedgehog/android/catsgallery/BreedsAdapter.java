@@ -3,11 +3,13 @@ package com.ehedgehog.android.catsgallery;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.ehedgehog.android.catsgallery.model.Breed;
+import com.ehedgehog.android.catsgallery.model.CatImage;
 
 import java.util.List;
 
@@ -46,4 +48,5 @@ public class BreedsAdapter extends RecyclerView.Adapter<BreedHolder> {
     public void addAll(List<Breed> breeds) {
         mBreeds.addAll(breeds);
     }
+
 }
